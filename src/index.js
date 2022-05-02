@@ -36,7 +36,6 @@ document.addEventListener('click', (e) => {
     current[0].className
     current[0].className.replace("active", "");
     this.className += " active";
-    //e.target.parentElement.classList.replace('active', "");
     e.target.classList.toggle('active');
     e.target.addEventListener('input', (event) => {
       editTask(event);
