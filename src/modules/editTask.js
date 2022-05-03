@@ -17,7 +17,6 @@ const editTask = (event) => {
           deleteTask(index);
           event.target.parentElement.remove();
         }
-        window.location.reload();
       }
     }
   });
