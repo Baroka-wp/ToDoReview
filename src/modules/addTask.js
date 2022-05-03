@@ -1,4 +1,4 @@
-import { setItems, getItems } from './storage.js';
+import { setItems, getItems } from './modules/storage.js';
 
 const addTask = (obj) => {
   const taskList = getItems();

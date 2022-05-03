@@ -1,9 +1,9 @@
 import './style.css';
-import deleteTask from './deleteTask.js';
-import addTasktoDom from './addTasktoDom.js';
-import loadTaskList from './loadTaskList.js';
-import editTask from './editTask.js';
-import { toggleCompleted, clearAllComplete } from './toggleCompleted.js';
+import deleteTask from './modules/deleteTask.js';
+import addTasktoDom from './modules/addTasktoDom.js';
+import loadTaskList from './modules/loadTaskList.js';
+import editTask from './modules/editTask.js';
+import { toggleCompleted, clearAllComplete } from './modules/toggleCompleted.js';
 
 loadTaskList();
 
@@ -32,11 +32,10 @@ document.addEventListener('click', (e) => {
     const element = e.target.parentElement.querySelector('i');
     element.classList.toggle('fa-trash-can');
     element.classList.toggle('fa-ellipsis-vertical');
-    var current = document.getElementsByClassName("active");
+    let current = document.getElementsByClassName("active");
     current[0].className
     current[0].className.replace("active", "");
     this.className += " active";
-    //e.target.parentElement.classList.replace('active', "");
     e.target.classList.toggle('active');
     e.target.addEventListener('input', (event) => {
       editTask(event);
