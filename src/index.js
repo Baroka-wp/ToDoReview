@@ -32,10 +32,8 @@ document.addEventListener('click', (e) => {
     const element = e.target.parentElement.querySelector('i');
     element.classList.toggle('fa-trash-can');
     element.classList.toggle('fa-ellipsis-vertical');
-    let current = document.getElementsByClassName("active");
-    current[0].className
-    current[0].className.replace("active", "");
-    this.className += " active";
+    element.classList.add('active');
+
     e.target.classList.toggle('active');
     e.target.addEventListener('input', (event) => {
       editTask(event);
